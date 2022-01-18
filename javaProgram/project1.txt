@@ -1,0 +1,44 @@
+<catalog>
+
+   <course>
+
+      <coursenumber>CPSC 1105</coursenumber>
+
+      <coursename> Technological Solutions</coursename>
+
+      <hours>
+
+         <inclasshrs>3</inclasshrs>
+
+         <inlabhrs>0<</inlab>
+
+         <totalhrs>3</totalhrs>
+
+      </hours>
+
+      <description> A problems solving course using the newest technologies to develop an understanding of and skills in electronic communications, information retrieval, word processing and desktop publishing, spreadsheet and data analysis, and electronic presentation techniques. Emphasis will be placed on using technology to solve practical problems. Students with credit for ITDS 2745 Computers and the World Wide Web seminar may not receive credit for this course.
+
+     </description> 
+   </course>
+
+   <course> 
+      <coursenumber>CPSC 1301</coursenumber>
+
+      <coursename> Computer Science 1 </coursename>
+
+      <hours>
+
+         <inclasshrs>3</inclasshrs>
+
+         <inlabhrs>0</inlabhrs>
+
+         <totalhrs>3<totalhrs>
+
+   <description>This course includes an overview of computers and programming; problem solving and  algorithm development; simple data types; arithmetic and logic operators; selection structures; repetition structures; text files; arrays (one-and-two-dimensional); procedural abstraction and software design; modular programming (including sub-programs or the equivalent).
+
+   <description>
+
+</course>
+
+</catalog>
+

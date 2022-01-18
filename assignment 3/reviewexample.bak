@@ -1,0 +1,36 @@
+;; The first three lines of this file were inserted by DrScheme. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(planet plai/plai:1:3/lang/reader)
+;Review example.. 
+(define-type F1WAE
+  [num (n number?)]
+  [add (lhs F1WAE?)
+       (rhs F1WAE?)]
+  [sub (lhs F1WAE?)
+       (rhs F1WAE?)]
+  [div (lhs F1WAE?)
+       (rhs F1WAE?)]
+  [mult (lhs F1WAE?)
+        (rhs F1WAE?)]
+  [with (name symbol?)(name-expr F1WAE?)(body F1WAE?)]
+  [id (name symbol?)]
+  [app (fun-name symbol?) (arg F1WAE?)]
+  )
+(define-type FunDef
+  [fundef (fun-name symbol?)
+          (arg-name symbol?)
+          (body F1WAE?)])
+
+(define (lookup-fundef fun-name fundefs)
+  (cond
+    [(empty? fundefs) (error fun-name "Function not found")]
+    [else (if (symbol = ? fun-name (fundef-fun-name (first fundefs)))
+              (first fundefs)
+              (lookup-fundef fun-name (rest fundefs)))]))
+
+;example on function use..
+;(define x (FunDef 'foo 'x (num 3)))
+(FunDef? x)
+(fundef-fun-name x)
+(fundef-arg-name x)
+(fundef-body x)

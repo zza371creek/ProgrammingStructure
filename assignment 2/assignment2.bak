@@ -1,0 +1,14 @@
+(define (parse sexp)
+(cond
+[(number? sexp) (num sexp)]
+[(list? sexp)
+(case (first sexp)
+[(+) (add (parse (second sexp))
+(parse (third sexp)))]
+[(-) (sub (parse (second sexp))
+(parse (third sexp)))]
+[(*) (multi (parse (second sexp))
+(parse (third sexp)))] 
+[(/) (div (parse (second sexp))
+(parse (third sexp)))] 
+)]))
